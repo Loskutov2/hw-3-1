@@ -43,6 +43,7 @@
   width: 1200px;
 }
 .lightbox__image{
-  height: 800px;
+  max-height: 800px;
+  height: 96%;
   border-radius: 2%;
 }

@@ -80,8 +80,10 @@ const lightboxImg = document.querySelector('.lightbox__image')
 
 div.addEventListener('click', openImg);
 function openImg(evt) {
-  lightboxImg.src=evt.target.dataset.src
-  lightbox.classList.remove('hidden')
+  if(evt.currentTarget !== evt.target){
+    lightboxImg.src=evt.target.dataset.src
+    lightbox.classList.remove('hidden')
+}
 }
 lightbox.addEventListener('click', closeImg);
 function closeImg(evt) {
